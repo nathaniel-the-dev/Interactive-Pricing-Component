@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<link rel="stylesheet" href="./css/style.css" />
+
+		<script src="https://unpkg.com/vue@next"></script>
+		<script src="./app.js" defer></script>
+
+		<title>Frontend Mentor | Interactive pricing component</title>
+	</head>
+	<body>
+		<header>
+			<h1>Simple, traffic-based pricing</h1>
+			<h2>Sign-up for our 30-day trial. No credit card required.</h2>
+		</header>
+
+		<noscript>
+			<h1>Page cannot work properly without JavaScript</h1>
+		</noscript>
+
+		<main>
+			<div class="container" id="form-container">
+				<form class="form">
+					<div class="form__body">
+						<div class="input-group grid" id="slider-group">
+							<h3 id="amount">100K Pageviews</h3>
+
+							<input id="slider" type="range" min="10" max="1000" step="50" list="slider-list" />
+
+							<datalist id="slider-list" tick>
+								<option value="10"></option>
+								<option value="50"></option>
+								<option value="100"></option>
+								<option value="500"></option>
+								<option value="1000"></option>
+							</datalist>
+
+							<h3 id="rate"><span>$16.00</span>&nbsp;/ month</h3>
+						</div>
+
+						<div class="input-group" id="billing-group">
+							<label class="billing-option">Monthly Billing</label>
+
+							<input type="checkbox" name="billing" id="billing" />
+							<label class="toggle" for="billing"></label>
+
+							<label class="billing-option" data-discount-amount="25">Yearly Billing</label>
+						</div>
+					</div>
+
+					<div class="form__footer">
+						<ul>
+							<li>Unlimited websites</li>
+							<li>100% data ownership</li>
+							<li>Email reports</li>
+						</ul>
+
+						<button class="btn-submit" type="submit">Start my trial</button>
+					</div>
+				</form>
+			</div>
+		</main>
+
+		<div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://www.twitter.com/natscamp02">Natscamp</a>.</div>
+	</body>
+</html>
