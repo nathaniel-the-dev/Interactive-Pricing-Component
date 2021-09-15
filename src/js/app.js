@@ -1,4 +1,4 @@
-const app = Vue.createApp({
+Vue.createApp({
 	template: `
     <form class="form">
         <div class="form__body">
@@ -79,6 +79,4 @@ const app = Vue.createApp({
 			requestAnimationFrame(() => this.$refs.slider.style.setProperty('--progress', this.progress));
 		},
 	},
-});
-
-app.mount('#form-container');
+}).mount('#form-container');
