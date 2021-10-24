@@ -48,7 +48,7 @@ Users should be able to:
     Here is how I used it in my solution:
 
 ```html
-<input id="slider" type="range" min="10" max="1000" step="50" list="slider-list" />
+<input id="slider" type="range" name="slider" min="10" max="1000" step="50" list="slider-list" />
 
 <datalist id="slider-list">
 	<option value="10"></option>
