@@ -33,8 +33,6 @@ Users should be able to:
 -   Solution URL: [Solution](https://www.frontendmentor.io/solutions/interactive-pricing-component-using-css-custom-properties-and-vuejs-2yTiBpbOL)
 -   Live Site URL: [Live Demo](https://interactive-pricing-component-eta-nine.vercel.app/)
 
-## My process
-
 ### Built with
 
 -   CSS custom properties
@@ -45,36 +43,37 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+-   HTML range elements can have different breakpoints specified on it. This can be acheived using the HTML datalist element.
 
-To see how you can add code snippets, see below:
+    Here is how I used it in my solution:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<input id="slider" type="range" min="10" max="1000" step="50" list="slider-list" />
+
+<datalist id="slider-list">
+	<option value="10"></option>
+	<option value="50"></option>
+	<option value="100"></option>
+	<option value="500"></option>
+	<option value="1000"></option>
+</datalist>
 ```
 
+-   There is a CSS at rule that allows styles to be applied only if it is supported on that browser. It is the @supports rule and it is useful for testing browser support before applying styles.
+
+    This example show how it can be used to apply styles to the range element only if it is supported:
+
 ```css
-.proud-of-this-css {
-	color: papayawhip;
+@supports selector(::-webkit-slider-thumb) {
+	input[type="range"]::-webkit-slider-thumb {
+		-webkit-appearance: none;
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-	console.log('🎉');
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
 ### Useful resources
 
--   [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
--   [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+-   [How to create a custom Toggle Switch using CSS](https://dev.to/karankmr/how-to-create-a-custom-toggle-switch-using-css-4pmi) - This article by Karan Kumar explains how to create a custom toggle switch using only CSS. It makes use of the label element and checkbox input to acheive this effect.
+-   [Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/) - This article by Daniel Stern shows how to style a range input across different browsers. I used this article to style the slider that is compatible across browsers.
 
 ## Author
 
